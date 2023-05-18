@@ -661,6 +661,9 @@ init_crontab(void)
 #if defined (APP_SCUT)
 	ret |= system("/sbin/check_crontab.sh a/1 a a a a scutclient_watchcat.sh");
 #endif
+#if defined (APP_SMARTDNS)
+	ret |= system("/sbin/check_crontab.sh 15 4 a a a update-china-list.sh");
+#endif
 	return ret;
 }
 
