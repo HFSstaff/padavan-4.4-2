@@ -65,6 +65,17 @@ if [ -f /etc_ro/openssl.cnf ]; then
 	cp -f /etc_ro/openssl.cnf /etc/ssl
 fi
 
+# create certs
+if [ ! -d /etc/ssl/certs ] ; then
+	if [ -f /etc_ro/certs.tgz ]; then
+		tar zxf /etc_ro/certs.tgz -C /etc/ssl
+	fi
+fi
+
+if [ ! -d /etc/ssl/private ] ; then
+	mkdir -p /etc/ssl/private
+fi
+
 # create symlinks
 ln -sf /home/root /home/admin
 ln -sf /proc/mounts /etc/mtab
