@@ -196,7 +196,7 @@ func_fill()
 	dir_crond="$dir_storage/cron/crontabs"
 	dir_wlan="$dir_storage/wlan"
 	dir_chnroute="$dir_storage/chinadns"
-	dir_gfwlist="$dir_storage/gfwlist"
+	#dir_gfwlist="$dir_storage/gfwlist"
 
 	script_start="$dir_storage/start_script.sh"
 	script_started="$dir_storage/started_script.sh"
@@ -235,11 +235,11 @@ func_fill()
 	fi
 
 	# create gfwlist
-	if [ ! -d "$dir_gfwlist" ] ; then
-		if [ -f "$gfwlist_conf_file" ]; then	
-			mkdir -p "$dir_gfwlist" && tar jxf "$gfwlist_conf_file" -C "$dir_gfwlist"
-		fi
-	fi
+	#if [ ! -d "$dir_gfwlist" ] ; then
+		#if [ -f "$gfwlist_conf_file" ]; then	
+			#mkdir -p "$dir_gfwlist" && tar jxf "$gfwlist_conf_file" -C "$dir_gfwlist"
+		#fi
+	#fi
 
 	# create start script
 	if [ ! -f "$script_start" ] ; then
