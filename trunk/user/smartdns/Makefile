@@ -27,4 +27,4 @@ romfs:
 	$(ROMFSINST) -p +x $(THISDIR)/update-china-list.sh /usr/bin/update-china-list.sh
 	$(ROMFSINST) /etc_ro/smartdns_custom.conf
 	$(ROMFSINST) -p +x $(THISDIR)/kcptun /usr/bin/kcptun
-	$(ROMFSINST) $(THISDIR)/kcptun_local.json /etc_ro/kcptun_local.json
+
